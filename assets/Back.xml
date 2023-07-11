@@ -1,22 +1,18 @@
 <exercises>
-    <upper_back>
-    </upper_back>
-    <mid_back>
+    <vertical>
+    <exercise>Pullup</exercise>
+    <exercise>Lat Pulldown</exercise>
+    <exercise>Straight Arm Pulldown</exercise>
+    </vertical>
+    <horizontal>
       <exercise>Seated Row</exercise>
-
-    </mid_back>
+      <exercise>Mid Row</exercise>
+      <exercise>Face Pulls</exercise>
+      <exercise>Dumbbell Rows</exercise>
+      <exercise>Bent Over Row</exercise>
+    </horizontal>
     <lower_back>
+    <exercise>Deadlift</exercise>
+    <exercise>Hyperextensions</exercise>
     </lower_back>
-  <exercise>Incline Bench Press</exercise>
-  <exercise>Decline Bench Press</exercise>
-  <exercise>Flat Dumbell Press</exercise>
-  <exercise>Incline Dumbell Press</exercise>
-  <exercise>Decline Dumbell Press</exercise>
-  <exercise>Flat Dumbell Fly</exercise>
-  <exercise>Incline Dumbell Fly</exercise>
-  <exercise>Decline Dumbell Fly</exercise>
-  <exercise>Machine Pec Dec</exercise>
-  <exercise>Pushups</exercise>
-  <exercise>Dips</exercise>
-  <exercise>Handstand Pushups</exercise>
 </exercises>

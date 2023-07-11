@@ -1,0 +1,23 @@
+<exercises>
+    <Quads>
+        <exercise>Leg extensions</exercise>
+        <exercise>Barbell squat</exercise>
+        <exercise>Leg press</exercise>
+        <exercise>Sumo squat</exercise>
+        <exercise>Walking lunges</exercise>
+    </Quads>
+    <Hamstrings>
+            <exercise>Hamstring curl</exercise>
+            <exercise>Hamstring standing curl</exercise>
+            <exercise>RDL</exercise>
+    </Hamstrings>
+    <Calves>
+        <exercise>Seated calf raise</exercise>
+        <exercise>Smith Machine Calf Raise</exercise>
+        <exercise>Standing calf raise machine</exercise>
+    </Calves>
+    <Forearms>
+        <exercise>Forearm curl front</exercise>
+        <exercise>Forearm curl back</exercise>
+    </Forearms>
+</exercises>
