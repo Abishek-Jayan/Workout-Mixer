@@ -1,0 +1,41 @@
+import xml.etree.ElementTree as ET
+import random
+
+from common.common import write_to_file
+
+def generate_leg_day():
+    generate_quads_workout()
+    generate_hams_workout()
+    generate_calves_workout()
+    generate_abs_workout()
+
+def generate_quads_workout():
+    chest_tree = ET.parse("assets/Chest.xml")
+    chest_tree_root = chest_tree.getroot()
+    chest_workout = random.sample(list(chest_tree_root), 3)
+
+    write_to_file(chest_workout)
+
+def generate_hams_workout():
+    shoulders_tree = ET.parse("assets/Shoulders.xml")
+    traps_tree = ET.parse("assets/Traps.xml")
+    shoulders_tree_root = shoulders_tree.getroot()
+    traps_tree_root = traps_tree.getroot()
+    shoulders_workout = random.sample(list(shoulders_tree_root), 2)
+    traps_workout = random.sample(list(traps_tree_root), 1)
+
+    write_to_file(shoulders_workout + traps_workout)
+
+def generate_calves_workout():
+    triceps_tree = ET.parse("assets/Triceps.xml")
+    tricep_tree_root = triceps_tree.getroot()
+    tricep_workout = random.sample(list(tricep_tree_root), 3)
+
+    write_to_file(tricep_workout)
+
+def generate_abs_workout():
+    triceps_tree = ET.parse("assets/Triceps.xml")
+    tricep_tree_root = triceps_tree.getroot()
+    tricep_workout = random.sample(list(tricep_tree_root), 3)
+
+    write_to_file(tricep_workout)
