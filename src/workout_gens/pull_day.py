@@ -3,32 +3,34 @@ import random
 
 from common.common import write_to_file
 
+
 def generate_pull_day():
     generate_back_workout()
     generate_biceps_workout()
     generate_abs_workout()
 
-def generate_back_workout():
-    chest_tree = ET.parse("assets/Chest.xml")
-    chest_tree_root = chest_tree.getroot()
-    chest_workout = random.sample(list(chest_tree_root), 3)
 
-    write_to_file(chest_workout)
+def generate_back_workout():
+    back_tree = ET.parse("assets/Back.xml")
+    back_tree_root = back_tree.getroot()
+    vertical = random.sample(list(back_tree_root.find("vertical")), 2)
+    horizontal = random.sample(list(back_tree_root.find("horizontal")), 2)
+    lowerback = random.sample(list(back_tree_root.find("lower_back")), 1)
+
+    write_to_file(vertical + horizontal + lowerback, start=True)
+
 
 def generate_biceps_workout():
-    shoulders_tree = ET.parse("assets/Shoulders.xml")
-    traps_tree = ET.parse("assets/Traps.xml")
-    shoulders_tree_root = shoulders_tree.getroot()
-    traps_tree_root = traps_tree.getroot()
-    shoulders_workout = random.sample(list(shoulders_tree_root), 2)
-    traps_workout = random.sample(list(traps_tree_root), 1)
+    biceps_tree = ET.parse("assets/Biceps.xml")
+    biceps_tree_root = biceps_tree.getroot()
+    long_head = random.sample(list(biceps_tree_root.find("longhead")), 2)
+    short_head = random.sample(list(biceps_tree_root.find("shorthead")), 2)
 
-    write_to_file(shoulders_workout + traps_workout)
+    write_to_file(long_head + short_head)
+
 
 def generate_abs_workout():
-    triceps_tree = ET.parse("assets/Triceps.xml")
-    tricep_tree_root = triceps_tree.getroot()
-    tricep_workout = random.sample(list(tricep_tree_root), 3)
-
-    write_to_file(tricep_workout)
-
+    abs_tree = ET.parse("assets/Abs.xml")
+    abs_tree_root = abs_tree.getroot()
+    abs_workout = abs_tree_root.find(random.choice(["set1", "set2"]))
+    write_to_file(abs_workout)

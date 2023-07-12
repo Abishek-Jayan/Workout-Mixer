@@ -1,9 +1,15 @@
 <exercises>
-<exercise>Hanging leg raises</exercise>
-<exercise>Hyperextension</exercise>
-<exercise>Decline russian twists</exercise>
-<exercise>Laying leg raise</exercise>
-<exercise>Laying crunch</exercise>
-<exercise>Bicycles</exercise>
-<exercise>Plank</exercise>
+<set1>
+    <exercise>Laying leg raise</exercise>
+    <exercise>Laying crunch</exercise>
+    <exercise>Bicycles</exercise>
+    <exercise>Plank</exercise>
+</set1>
+<set2>
+    <exercise>Hanging leg raises</exercise>
+    <exercise>Hyperextension</exercise>
+    <exercise>Decline russian twists</exercise>
+</set2>
+
+
 </exercises>

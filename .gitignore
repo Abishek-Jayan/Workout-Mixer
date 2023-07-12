@@ -1,3 +1,5 @@
 env/
 .vscode/
 workout.txt
+__pycache__
+common/__pycache__/
