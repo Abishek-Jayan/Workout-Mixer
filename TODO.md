@@ -2,8 +2,7 @@
 
 - ~~Complete the xml structuring~~
 - ~~Write the code for pull day and leg day~~
-- Set up the code for remembering avoiding repeat workouts
-- Add console messages and press x to continue feature
+- ~~Add console messages and press Enter to continue feature~~
 - Setup code for ensuring successful write to file
 - Bundle into executable
 - Set up Google Docs integration via API
