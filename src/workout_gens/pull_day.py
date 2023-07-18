@@ -4,20 +4,20 @@ import random
 from common.common import write_to_file
 
 
-def generate_pull_day():
-    generate_back_workout()
+def generate_pull_day(start=True):
+    generate_back_workout(start)
     generate_biceps_workout()
     generate_abs_workout()
 
 
-def generate_back_workout():
+def generate_back_workout(start):
     back_tree = ET.parse("assets/Back.xml")
     back_tree_root = back_tree.getroot()
     vertical = random.sample(list(back_tree_root.find("vertical")), 2)
     horizontal = random.sample(list(back_tree_root.find("horizontal")), 2)
     lowerback = random.sample(list(back_tree_root.find("lower_back")), 1)
 
-    write_to_file(vertical + horizontal + lowerback, start=True)
+    write_to_file(vertical + horizontal + lowerback, start=start)
 
 
 def generate_biceps_workout():

@@ -4,18 +4,18 @@ import random
 from common.common import write_to_file
 
 
-def generate_push_day():
-    generate_chest_workout()
+def generate_push_day(start=True):
+    generate_chest_workout(start)
     generate_shoulder_workout()
     generate_tricep_workout()
 
 
-def generate_chest_workout():
+def generate_chest_workout(start):
     chest_tree = ET.parse("assets/Chest.xml")
     chest_tree_root = chest_tree.getroot()
     chest_workout = random.sample(list(chest_tree_root), 3)
 
-    write_to_file(chest_workout, start=True)
+    write_to_file(chest_workout, start=start)
 
 
 def generate_shoulder_workout():
