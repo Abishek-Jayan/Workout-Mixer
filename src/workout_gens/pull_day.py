@@ -23,7 +23,7 @@ def generate_back_workout(start):
 def generate_biceps_workout():
     biceps_tree = ET.parse("assets/Biceps.xml")
     biceps_tree_root = biceps_tree.getroot()
-    long_head = random.sample(list(biceps_tree_root.find("longhead")), 2)
+    long_head = random.sample(list(biceps_tree_root.find("longhead")), 1)
     short_head = random.sample(list(biceps_tree_root.find("shorthead")), 2)
 
     write_to_file(long_head + short_head)
