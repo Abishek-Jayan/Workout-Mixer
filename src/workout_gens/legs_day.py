@@ -5,7 +5,7 @@ from common.common import write_to_file
 
 
 def generate_leg_day(start=True):
-    random.seed(random.SystemRandom())
+    random.seed(random.SystemRandom().randint(1,100))
     generate_legs_workout(start)
     generate_forearms_workout()
 

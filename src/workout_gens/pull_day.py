@@ -5,7 +5,7 @@ from common.common import write_to_file
 
 
 def generate_pull_day(start=True):
-    random.seed(random.SystemRandom())
+    random.seed(random.SystemRandom().randint(1,100))
     generate_back_workout(start)
     generate_biceps_workout()
     generate_abs_workout()
