@@ -33,5 +33,5 @@ def generate_biceps_workout():
 def generate_abs_workout():
     abs_tree = ET.parse("assets/Abs.xml")
     abs_tree_root = abs_tree.getroot()
-    abs_workout = abs_tree_root.find(random.choice(["set1", "set2"]))
+    abs_workout = abs_tree_root.find(random.choice(["set1", "set2", "set3"]))
     write_to_file(abs_workout)
