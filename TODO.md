@@ -3,8 +3,9 @@
 - ~~Complete the xml structuring~~
 - ~~Write the code for pull day and leg day~~
 - ~~Add console messages and press Enter to continue feature~~
-- ~~Add multiple days of workouts creation on input feature~~
 - ~~Setup code for ensuring successful write to file~~
+- Add multiple days of workouts creation on input feature
+- Add mechanic for choosing what grip to use on barbell exercise
 - Bundle into executable
 - Set up Google Docs integration via API
 - Add progressive overload chart
