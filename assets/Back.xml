@@ -10,8 +10,9 @@
       <exercise>Seated Row</exercise>
       <exercise>Mid Row</exercise>
       <exercise>Face Pulls</exercise>
-      <exercise>Dumbbell Rows</exercise>
-      <exercise>Bent Over Row</exercise>
+      <exercise>Dumbbell Rows Dual Arm</exercise>
+      <exercise>Dumbbell Rows Single Arm</exercise>
+      <exercise>Bent Over Barbell Row</exercise>
     </horizontal>
     <lower_back>
     <exercise>Deadlift</exercise>

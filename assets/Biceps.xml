@@ -6,10 +6,15 @@
         <exercise>Dumbbell Bicep Curls</exercise>
         <exercise>Barbell Bicep Curls</exercise>
         <exercise>Concentration Curl</exercise>
+        <exercise>Cable Bicep Curl</exercise>
     </shorthead>
     <longhead>
         <exercise>Dumbbell Hammer Curls normal</exercise>
         <exercise>Dumbbell Hammer Curls close</exercise>
         <exercise>Dumbbell Preacher Hammer Curls</exercise>
+        <exercise>Cable Hammer Curl</exercise>
+        <exercise>Incline Dumbell Curl</exercise>
+        <exercise>Close Grip Barbell Curls</exercise>
+        <exercise>Close Grip Chinups</exercise>
     </longhead>
 </exercises>
