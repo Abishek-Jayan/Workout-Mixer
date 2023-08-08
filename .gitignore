@@ -3,3 +3,4 @@ env/
 workout.txt
 __pycache__
 common/__pycache__/
+node_modules
