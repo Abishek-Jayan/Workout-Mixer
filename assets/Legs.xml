@@ -1,15 +1,21 @@
 <exercises>
     <Quads>
-        <exercise>Leg extensions</exercise>
-        <exercise>Barbell squat</exercise>
+        <exercise>Dual Leg extensions</exercise>
+        <exercise>Single Leg extensions</exercise>
+        <exercise>Barbell normal squat</exercise>
+        <exercise>Dumbbell normal squat</exercise>
         <exercise>Leg press</exercise>
-        <exercise>Sumo squat</exercise>
-        <exercise>Walking lunges</exercise>
+        <exercise>Barbell Sumo squat</exercise>
+        <exercise>Dumbell Sumo squat</exercise>
+        <exercise>Dumbbell Goblet squat</exercise>
+        <exercise>Dumbbell Walking lunges</exercise>
+        <exercise>Barbell Walking lunges</exercise>
         <exercise>Standing lunges</exercise>
         <exercise>Pistol squats</exercise>
         <exercise>Weighted Bulgarian Split Squats</exercise>
         <exercise>Single leg tyre box jumps</exercise>
         <exercise>Tyre flip</exercise>
+        <exercise>Broad Jumps</exercise>
     </Quads>
     <Hamstrings>
             <exercise>Hamstring curl</exercise>
