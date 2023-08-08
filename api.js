@@ -1,7 +1,12 @@
 const { MongoClient, ServerApiVersion } = require("mongodb");
 const dotenv = require("dotenv");
+const express = require("express");
+
 dotenv.config();
-async function main() {
+
+const app = express();
+const port = process.env.PORT || 3000;
+app.get("/getWorkoutData", async (req, res) => {
   const uri = "mongodb+srv://" + process.env.MONGO_URI;
   const client = new MongoClient(uri, {
     serverApi: {
@@ -20,16 +25,14 @@ async function main() {
   } finally {
     await client.close();
   }
-}
+});
 async function getWorkout(client) {
   const database = client.db("WorkoutDatabase"); // Replace with your database name
   collection = await database.collection("Workouts");
   const document = await collection.findOne({}); // Retrieve the first document
   const chestExercises = document.chest.exercises;
-
-  console.log("Chest Exercises:");
-  chestExercises.forEach((exercise, index) => {
-    console.log(`${index + 1}. ${exercise}`);
-  });
+  console.log(chestExercises);
 }
-main().catch(console.error);
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
