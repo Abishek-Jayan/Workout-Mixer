@@ -1,22 +1,22 @@
-import xml.etree.ElementTree as ET
 import random
-
+import requests
 from common.common import write_to_file
+
+url = "http://localhost:3000/getWorkoutData"
 
 
 def generate_pull_day(start=True):
-    random.seed(random.SystemRandom().randint(1,100))
+    random.seed(random.SystemRandom().randint(1, 100))
     generate_back_workout(start)
-    generate_biceps_workout()
-    generate_abs_workout()
+    # generate_biceps_workout()
+    # generate_abs_workout()
 
 
 def generate_back_workout(start):
-    back_tree = ET.parse("assets/Back.xml")
-    back_tree_root = back_tree.getroot()
-    vertical = random.sample(list(back_tree_root.find("vertical")), 2)
-    horizontal = random.sample(list(back_tree_root.find("horizontal")), 2)
-    lowerback = random.sample(list(back_tree_root.find("lower_back")), 1)
+    back_data = requests.get(url).json()
+    vertical = random.sample(back_data["vertical"], 2)
+    horizontal = random.sample(back_data["horizontal"], 2)
+    lowerback = random.sample(back_data["lower_back"], 1)
 
     write_to_file(vertical + horizontal + lowerback, start=start)
 
