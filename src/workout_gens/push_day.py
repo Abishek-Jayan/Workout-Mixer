@@ -8,8 +8,8 @@ url = "http://localhost:3000/getWorkoutData"
 def generate_push_day(start=True):
     random.seed(random.SystemRandom().randint(1, 100))
     generate_chest_workout(start)
-    # generate_shoulder_workout()
-    # generate_tricep_workout()
+    generate_shoulder_workout()
+    generate_tricep_workout()
 
 
 def generate_chest_workout(start):
@@ -29,8 +29,7 @@ def generate_shoulder_workout():
 
 
 def generate_tricep_workout():
-    triceps_tree = ET.parse("assets/Triceps.xml")
-    tricep_tree_root = triceps_tree.getroot()
-    tricep_workout = random.sample(list(tricep_tree_root), 3)
+    triceps_data = requests.get(url, params={"musclegroup": "triceps"}).json()
+    tricep_workout = random.sample(list(triceps_data), 3)
 
     write_to_file(tricep_workout)

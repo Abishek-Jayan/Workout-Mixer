@@ -14,18 +14,24 @@ const client = new MongoClient(uri, {
     deprecationErrors: true,
   },
 });
-
-app.get("/getWorkoutData", async (req, res) => {
+app.get("/", async (req, res) => {
   try {
     console.log("Connecting...");
     await client.connect();
     console.log("Connected!");
+    res.json("");
   } catch (e) {
     console.error(e);
   }
+});
+app.get("/getWorkoutData", async (req, res) => {
   data = req.query;
   workout = await getWorkout(client, data.musclegroup);
   res.json(workout);
+});
+app.get("/close", async (req, res) => {
+  await client.close();
+  res.json("");
 });
 
 async function getWorkout(client, _musclegroup) {
@@ -36,7 +42,6 @@ async function getWorkout(client, _musclegroup) {
   };
   const document = await collection.findOne(query);
   const exercises = document[_musclegroup].exercises;
-  await client.close();
   return exercises;
 }
 app.listen(port, () => {
