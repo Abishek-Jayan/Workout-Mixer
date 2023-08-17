@@ -15,8 +15,8 @@ def generate_leg_day(start=True):
 def generate_legs_workout(start):
     legs_data = requests.get(url, params={"musclegroup": "legs"}).json()
     quads = random.sample(legs_data["quads"], 3)
-    hamstrings = random.sample(legs_data["hamstrings"], 2)
-    calves = random.sample(legs_data["calves"], 1)
+    hamstrings = random.sample(legs_data["hamstrings"], 3)
+    calves = random.sample(legs_data["calves"], 2)
 
     write_to_file(quads + hamstrings + calves, start=start)
 
