@@ -2,7 +2,7 @@ import random
 import requests
 from common.common import write_to_file
 
-url = "http://localhost:3000/getWorkoutData"
+url = "https://workout-mixer.vercel.app/getWorkoutData"
 
 
 def generate_pull_day(start=True):
