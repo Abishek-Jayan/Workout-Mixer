@@ -22,5 +22,5 @@ def generate_legs_workout(start):
 
 
 def generate_forearms_workout():
-    forearms_workout = requests.get(url, params={"musclegroup": "legs"}).json()
+    forearms_workout = requests.get(url, params={"musclegroup": "forearms"}).json()
     write_to_file(list(forearms_workout))
