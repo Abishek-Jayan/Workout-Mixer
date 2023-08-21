@@ -7,7 +7,7 @@
 - ~~Add console messages and press Enter to continue feature~~
 - ~~Setup code for ensuring successful write to file~~
 - ~~Set up mongodb database and nodejs api for data storage and access~~
-- Set up node js app on vercel for hosting
+- ~~Set up node js app on vercel for hosting~~
 
 ## Second Milestone
 
