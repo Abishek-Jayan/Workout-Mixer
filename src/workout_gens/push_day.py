@@ -30,6 +30,6 @@ def generate_shoulder_workout():
 
 def generate_tricep_workout():
     triceps_data = requests.get(url, params={"musclegroup": "triceps"}).json()
-    tricep_workout = random.sample(list(triceps_data), 3)
+    tricep_workout = random.sample(list(triceps_data), 2)
 
     write_to_file(tricep_workout)

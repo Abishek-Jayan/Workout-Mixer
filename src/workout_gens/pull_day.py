@@ -24,7 +24,7 @@ def generate_back_workout(start):
 def generate_biceps_workout():
     biceps_data = requests.get(url, params={"musclegroup": "biceps"}).json()
     long_head = random.sample(biceps_data["longhead"], 2)
-    short_head = random.sample(biceps_data["shorthead"], 2)
+    short_head = random.sample(biceps_data["shorthead"], 1)
 
     write_to_file(long_head + short_head)
 
