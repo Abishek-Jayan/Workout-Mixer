@@ -14,8 +14,8 @@ def generate_pull_day(start=True):
 
 def generate_back_workout(start):
     back_data = requests.get(url, params={"musclegroup": "back"}).json()
-    vertical = random.sample(back_data["vertical"], 2)
-    horizontal = random.sample(back_data["horizontal"], 2)
+    vertical = random.sample(back_data["vertical"], 1)
+    horizontal = random.sample(back_data["horizontal"], 1)
     lowerback = random.sample(back_data["lower_back"], 1)
 
     write_to_file(vertical + horizontal + lowerback, start=start)
@@ -24,7 +24,7 @@ def generate_back_workout(start):
 def generate_biceps_workout():
     biceps_data = requests.get(url, params={"musclegroup": "biceps"}).json()
     long_head = random.sample(biceps_data["longhead"], 2)
-    short_head = random.sample(biceps_data["shorthead"], 1)
+    short_head = random.sample(biceps_data["shorthead"], 2)
 
     write_to_file(long_head + short_head)
 
