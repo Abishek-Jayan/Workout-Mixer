@@ -16,5 +16,5 @@ def generate_abs_day(start=True):
 
 def generate_abs_workout(start):
     abs_data = requests.get(url, params={"musclegroup": "abs"}).json()
-    abs_workout = abs_data[random.choice(["set1", "set2", "set3"])]
+    abs_workout = abs_data[random.choice(["set1", "set2"])]
     write_to_file(["Handstand Finger Press"] + abs_workout, start=start)
