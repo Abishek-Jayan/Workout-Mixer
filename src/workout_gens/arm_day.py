@@ -20,7 +20,7 @@ def generate_arm_day(start=True):
 def generate_trap_workout(start):
     traps_data = requests.get(url, params={"musclegroup": "traps"}).json()
     traps_workout = random.sample(list(traps_data), 1)
-    write_to_file(["50 Dips", "Handstand Finger Press"] + traps_workout, start=start)
+    write_to_file(["Handstand Finger Press"] + traps_workout, start=start)
 
 
 def generate_tricep_workout():
