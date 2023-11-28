@@ -16,8 +16,8 @@ def generate_back_day(start=True):
 
 def generate_back_workout(start):
     back_data = requests.get(url, params={"musclegroup": "back"}).json()
-    vertical = random.sample(back_data["vertical"], 1)
-    horizontal = random.sample(back_data["horizontal"], 1)
+    vertical = random.sample(back_data["vertical"], 2)
+    horizontal = random.sample(back_data["horizontal"], 2)
     lowerback = random.sample(back_data["lower_back"], 1)
 
     write_to_file(
