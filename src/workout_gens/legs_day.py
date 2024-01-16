@@ -4,11 +4,13 @@ import requests
 from common.common import write_to_file
 import os
 from dotenv import load_dotenv
+import json
 
 load_dotenv()
 
 url = os.getenv("BACKEND_URL")
-
+with open("src\workout_gens\mandatory.json", "r") as mandatory_file:
+    mandatory_data = json.load(mandatory_file)
 
 def generate_leg_day(start=True):
     random.seed(random.SystemRandom().randint(1, 100))
@@ -22,6 +24,6 @@ def generate_legs_workout(start):
     calves = random.sample(legs_data["calves"], 1)
 
     write_to_file(
-        ["100 Squats", "Handstand Finger Press"] + quads + hamstrings + calves,
+        mandatory_data["leg_workout"] + quads + hamstrings + calves,
         start=start,
     )

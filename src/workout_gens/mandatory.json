@@ -1,0 +1,10 @@
+{
+  "chest_workout": ["100 Pushups", "100 Dips"],
+  "shoulder_workout": [],
+  "triceps_workout": [],
+  "traps_workout": [],
+  "biceps_workout": [],
+  "back_workout": ["100 Pullups", "100 Chinups"],
+  "leg_workout": ["100 Squats", "50 Dips"],
+  "forearms_workout": []
+}
