@@ -1,10 +1,14 @@
 {
-  "chest_workout": ["100 Pushups", "100 Dips"],
-  "shoulder_workout": [],
+  "chest_workout": ["100 Midline Pushups", "100 Dips"],
+  "shoulder_workout": [
+    "Remember to take 1 front delt and 1 lateral delt exercise"
+  ],
   "triceps_workout": [],
   "traps_workout": [],
-  "biceps_workout": [],
-  "back_workout": ["100 Pullups", "100 Chinups"],
-  "leg_workout": ["100 Squats", "50 Dips"],
+  "biceps_workout": [
+    "Remember to do 1 shorthead and 1 longhead no matter what"
+  ],
+  "back_workout": ["30 Slow Wide Grip Pullups", "30 Slow Close Grip Chinups"],
+  "leg_workout": ["100 Squats", "50 Pistol Squats"],
   "forearms_workout": []
 }
