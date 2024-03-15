@@ -21,13 +21,13 @@ def generate_arm_day(start=True):
 
 def generate_trap_workout(start):
     traps_data = requests.get(url, params={"musclegroup": "traps"}).json()
-    traps_workout = random.sample(list(traps_data), 2)
+    traps_workout = random.sample(list(traps_data), 1)
     write_to_file(mandatory_data["traps_workout"] + traps_workout, start=start)
 
 
 def generate_tricep_workout():
     triceps_data = requests.get(url, params={"musclegroup": "triceps"}).json()
-    tricep_workout = random.sample(list(triceps_data), 2)
+    tricep_workout = random.sample(list(triceps_data), 1)
 
     write_to_file(mandatory_data["triceps_workout"] + tricep_workout)
 
